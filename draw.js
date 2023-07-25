@@ -12,19 +12,19 @@ function clear(){
 function loop(){
     let FPS = 60;
     let timeLoop = 1000/FPS;
-    let height = myCanvas.height - 1000;
-    let counter = myCanvas.height - 1000;
+    let height = myCanvas.height - 500;
+    let counter = myCanvas.height - 500;
 
     setInterval(() => {
 
-        if(height > (myCanvas.height-200) && counter > (myCanvas.height-200)){
-            height -= 10;
-            counter -= 10;
-        }else if(height < myCanvas.height){
+        if(height > (myCanvas.height - 550) && counter > (myCanvas.height - 550)){
+            height -= 5;
+            counter -= 5;
+        }else if(height < myCanvas.height - 500){
             height += 10;
-            if(height >= myCanvas.height){
+            if(height >= myCanvas.height - 500){
 
-                counter = myCanvas.height;
+                counter = myCanvas.height - 500;
             }
         }
         clear();
@@ -263,8 +263,8 @@ function vayTay(){
         vechan(pen, 550, 450, 55, 90, 10)
         veDau(pen, 430, 90, 200, 130, 9) // vedau
         
-        tainghe(pen, 390, 115, 25, 80, 10) // ve tai trai
-        tainghe(pen, 645, 115, 25, 80, 10)
+        // tainghe(pen, 390, 115, 25, 80, 10) // ve tai trai
+        // tainghe(pen, 645, 115, 25, 80, 10)
         
         non(pen, 486, 55, 90, 35, 6) // non 
         
@@ -311,7 +311,7 @@ function vayTay(){
     // roundedRect(pen, 12, 12, 150, 150, 1);
 
 }
-vayTay();
+// vayTay();
 function veMacDinh(){
     setInterval(() => {
         strokeStyle = "white";
@@ -321,8 +321,8 @@ function veMacDinh(){
         vechan(pen, 550, 450, 55, 90, 10)
         veDau(pen, 430, 90, 200, 130, 9) // vedau
         
-        tainghe(pen, 390, 115, 25, 80, 10) // ve tai trai
-        tainghe(pen, 645, 115, 25, 80, 10)
+        // tainghe(pen, 390, 115, 25, 80, 10) // ve tai trai
+        // tainghe(pen, 645, 115, 25, 80, 10)
         
         non(pen, 486, 55, 90, 35, 6) // non 
         
@@ -370,4 +370,3 @@ function veMacDinh(){
 
 }
 veMacDinh();
-
