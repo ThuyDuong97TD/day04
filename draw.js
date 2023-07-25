@@ -5,7 +5,35 @@ let centerX = myCanvas.width / 2;
 let centerY = myCanvas.height / 2;
 let rectWidth = 100;
 
+function clear(){
+    pen.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}
 
+function loop(){
+    let FPS = 60;
+    let timeLoop = 1000/FPS;
+    let height = myCanvas.height - 1000;
+    let counter = myCanvas.height - 1000;
+
+    setInterval(() => {
+
+        if(height > (myCanvas.height-200) && counter > (myCanvas.height-200)){
+            height -= 10;
+            counter -= 10;
+        }else if(height < myCanvas.height){
+            height += 10;
+            if(height >= myCanvas.height){
+
+                counter = myCanvas.height;
+            }
+        }
+        clear();
+        tainghe(pen, 390, height, 25, 80, 10) // ve tai trai
+        tainghe(pen, 645, height, 25, 80, 10)
+    }, timeLoop);
+}
+
+loop();
 
 function veDau(ctx, x, y, width, height, radius) {
     ctx.beginPath();
